@@ -248,7 +248,7 @@ header.sticky{
     border: none;
     padding:  14px 30px;
     border-radius: 15px;
-    color: var(--bg-color);
+    color: black;
     top:6px;
     right: 6px;
     cursor: pointer;
@@ -338,3 +338,59 @@ header.sticky{
     margin-bottom: 30px;
     position: relative;
 }
+
+
+
+
+/* arky CSS */
+
+
+.jsout {
+    display: grid; 
+    grid-template-columns: 25% 25% 25%; 
+    grid-template-rows: auto;
+    background-color: white;
+    margin-top: 100px;
+    justify-content: space-around;   
+    /* border-bottom: 5px solid red; */
+    
+
+}
+
+.jsout img { 
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+}
+
+.jsout div {
+    display: grid; 
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 50px 260px 50px;  */
+    grid-row: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    /* border: 2px solid grey; */
+} 
+
+.jsout div img {
+    display: grid;
+    grid-row-start: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.jsout div a {
+    grid-row-start: 3;
+   
+    margin-bottom: 20px;
+    /* border-bottom: 2px solid grey; */
+}
+.jsout div h3 {
+    grid-row-start: 1;
+    /* margin-bottom: 30px; */
+
+}
+
+
