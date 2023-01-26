@@ -127,23 +127,21 @@ const soupSample = () => {
                 const recipe = result.results[i];
        
                 const recipeContainer = document.createElement('div');
-                // Create a title element and set its text content to the recipe title
+                
                 const title = document.createElement('h3');
                 title.textContent = recipe.title;
-                // Create an image element and set its source to the recipe image
+                
                 const image = document.createElement('img');
                 image.src = baseUri + recipe.image;
-                // image.style.gridRow='2' 
-                // Create a link element and set its href to the recipe source URL
+                
                 const link = document.createElement('a');
                 link.href = recipe.sourceUrl;
                 link.textContent = "View Recipe"
-                // link.style.gridRow = '4'
-                // Append the title, image, and link to the recipe container
+               
                 recipeContainer.append(title);
                 recipeContainer.append(image);
                 recipeContainer.append(link);
-                // Append the recipe container to the output element
+                
                 output.append(recipeContainer);
             }
 
@@ -234,7 +232,7 @@ const veganSample = () => {
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
-                // Create a container for each recipe
+                
                 const recipeContainer = document.createElement('div');
         
                 const title = document.createElement('h3');
@@ -286,7 +284,7 @@ const pastaSample = () => {
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
-                // Create a container for each recipe
+                
                 const recipeContainer = document.createElement('div');
                 
                 const title = document.createElement('h3');
