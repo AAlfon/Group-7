@@ -76,11 +76,10 @@ const searchInput = () => {
                 link.href = recipe.sourceUrl;
                 link.textContent = "View Recipe"
 
-                // Append the title, image, and link to the recipe container
                 recipeContainer.append(title);
                 recipeContainer.append(image);
                 recipeContainer.append(link);
-                // Append the recipe container to the output element
+              
                 output.append(recipeContainer);
             }
 
@@ -95,7 +94,8 @@ const searchInput = () => {
 const searchBtn = document.querySelector('#searchBtn');
 
 searchBtn.addEventListener(
-    'click', () => {
+    'click', (e) => {
+        e.preventDefault();
         searchInput();
 
 
@@ -123,7 +123,7 @@ const soupSample = () => {
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
-                // Create a container for each recipe
+       
                 const recipeContainer = document.createElement('div');
                 // Create a title element and set its text content to the recipe title
                 const title = document.createElement('h3');
