@@ -51,7 +51,10 @@ const searchInput = () => {
 
     const finalUrl = wholeRl + searchItem.value;
 
-    // fetch ( requestURL, requestOptions )
+    output.innerHTML = "";
+   
+
+    
     fetch(finalUrl)
         .then(res => {
             return res.json();
@@ -59,7 +62,7 @@ const searchInput = () => {
         .then(result => {
             console.log(result);
             searchItem.value = "";
-            //  titleOutput.innerText="" 
+
 
 
             for (let i = 0; i < result.results.length; i++) {
@@ -110,16 +113,15 @@ searchBtn.addEventListener(
 const soupSample = () => {
     const finalUrl = "https://api.spoonacular.com/recipes/search?apiKey=1338dc42c490464081ce69c476990c97&number=9&query=soup";
 
-    // fetch ( requestURL, requestOptions )
+    output.innerHTML = "";
+
     fetch(finalUrl)
         .then(res => {
             return res.json();
         })
         .then(result => {
             console.log(result);
-            //  searchItem.value="";
-            //  titleOutput.innerText="" 
-
+  
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
@@ -167,38 +169,35 @@ soupBtn.addEventListener(
 const friedSample = () => {
     const finalUrl = "https://api.spoonacular.com/recipes/search?apiKey=1338dc42c490464081ce69c476990c97&number=9&query=fried";
 
-    // fetch ( requestURL, requestOptions )
+    output.innerHTML = "";
     fetch(finalUrl)
         .then(res => {
             return res.json();
         })
         .then(result => {
             console.log(result);
-            //  searchItem.value="";
-            //  titleOutput.innerText="" 
+ 
 
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
-                // Create a container for each recipe
+             
                 const recipeContainer = document.createElement('div');
-                // Create a title element and set its text content to the recipe title
+           
                 const title = document.createElement('h3');
                 title.textContent = recipe.title;
-                // Create an image element and set its source to the recipe image
+            
                 const image = document.createElement('img');
                 image.src = baseUri + recipe.image;
-                // image.style.gridRow='2' 
-                // Create a link element and set its href to the recipe source URL
+                
                 const link = document.createElement('a');
                 link.href = recipe.sourceUrl;
                 link.textContent = "View Recipe"
-                // link.style.gridRow = '4'
-                // Append the title, image, and link to the recipe container
+              
                 recipeContainer.append(title);
                 recipeContainer.append(image);
                 recipeContainer.append(link);
-                // Append the recipe container to the output element
+                
                 output.append(recipeContainer);
             }
 
@@ -222,38 +221,36 @@ friedBtn.addEventListener(
 const veganSample = () => {
     const finalUrl = "https://api.spoonacular.com/recipes/search?apiKey=1338dc42c490464081ce69c476990c97&number=9&query=vegan";;
 
-    // fetch ( requestURL, requestOptions )
+    output.innerHTML = "";
+
     fetch(finalUrl)
         .then(res => {
             return res.json();
         })
         .then(result => {
             console.log(result);
-            //  searchItem.value="";
-            //  titleOutput.innerText="" 
+       
 
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
                 // Create a container for each recipe
                 const recipeContainer = document.createElement('div');
-                // Create a title element and set its text content to the recipe title
+        
                 const title = document.createElement('h3');
                 title.textContent = recipe.title;
-                // Create an image element and set its source to the recipe image
+   
                 const image = document.createElement('img');
                 image.src = baseUri + recipe.image;
-                // image.style.gridRow='2' 
-                // Create a link element and set its href to the recipe source URL
+              
                 const link = document.createElement('a');
                 link.href = recipe.sourceUrl;
                 link.textContent = "View Recipe"
-                // link.style.gridRow = '4'
-                // Append the title, image, and link to the recipe container
+     
                 recipeContainer.append(title);
                 recipeContainer.append(image);
                 recipeContainer.append(link);
-                // Append the recipe container to the output element
+               
                 output.append(recipeContainer);
             }
 
@@ -277,38 +274,35 @@ veganBtn.addEventListener(
 const pastaSample = () => {
     const finalUrl = "https://api.spoonacular.com/recipes/search?apiKey=1338dc42c490464081ce69c476990c97&number=9&query=pasta";;
 
-    // fetch ( requestURL, requestOptions )
+    output.innerHTML = "";
+
     fetch(finalUrl)
         .then(res => {
             return res.json();
         })
         .then(result => {
             console.log(result);
-            //  searchItem.value="";
-            //  titleOutput.innerText="" 
-
+      
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
                 // Create a container for each recipe
                 const recipeContainer = document.createElement('div');
-                // Create a title element and set its text content to the recipe title
+                
                 const title = document.createElement('h3');
                 title.textContent = recipe.title;
-                // Create an image element and set its source to the recipe image
+               
                 const image = document.createElement('img');
                 image.src = baseUri + recipe.image;
-                // image.style.gridRow='2' 
-                // Create a link element and set its href to the recipe source URL
+            
                 const link = document.createElement('a');
                 link.href = recipe.sourceUrl;
                 link.textContent = "View Recipe"
-                // link.style.gridRow = '4'
-                // Append the title, image, and link to the recipe container
+                
                 recipeContainer.append(title);
                 recipeContainer.append(image);
                 recipeContainer.append(link);
-                // Append the recipe container to the output element
+                
                 output.append(recipeContainer);
             }
 
@@ -334,38 +328,36 @@ pastaBtn.addEventListener(
 const steakSample = () => {
     const finalUrl = "https://api.spoonacular.com/recipes/search?apiKey=1338dc42c490464081ce69c476990c97&number=9&query=steak";;
 
-    // fetch ( requestURL, requestOptions )
+    output.innerHTML = "";
+
     fetch(finalUrl)
         .then(res => {
             return res.json();
         })
         .then(result => {
             console.log(result);
-            //  searchItem.value="";
-            //  titleOutput.innerText="" 
+            
 
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
-                // Create a container for each recipe
+                
                 const recipeContainer = document.createElement('div');
-                // Create a title element and set its text content to the recipe title
+                
                 const title = document.createElement('h3');
                 title.textContent = recipe.title;
-                // Create an image element and set its source to the recipe image
+                
                 const image = document.createElement('img');
                 image.src = baseUri + recipe.image;
-                // image.style.gridRow='2' 
-                // Create a link element and set its href to the recipe source URL
+                
                 const link = document.createElement('a');
                 link.href = recipe.sourceUrl;
                 link.textContent = "View Recipe"
-                // link.style.gridRow = '4'
-                // Append the title, image, and link to the recipe container
+                
                 recipeContainer.append(title);
                 recipeContainer.append(image);
                 recipeContainer.append(link);
-                // Append the recipe container to the output element
+                
                 output.append(recipeContainer);
             }
 
@@ -391,38 +383,37 @@ steakBtn.addEventListener(
 const dessertSample = () => {
     const finalUrl = "https://api.spoonacular.com/recipes/search?apiKey=1338dc42c490464081ce69c476990c97&number=9&query=dessert";;
 
-    // fetch ( requestURL, requestOptions )
+    output.innerHTML = "";
+
     fetch(finalUrl)
         .then(res => {
             return res.json();
         })
         .then(result => {
             console.log(result);
-            //  searchItem.value="";
-            //  titleOutput.innerText="" 
+            
 
 
             for (let i = 0; i < result.results.length; i++) {
                 const recipe = result.results[i];
-                // Create a container for each recipe
+                
                 const recipeContainer = document.createElement('div');
-                // Create a title element and set its text content to the recipe title
+                
                 const title = document.createElement('h3');
                 title.textContent = recipe.title;
-                // Create an image element and set its source to the recipe image
+            
                 const image = document.createElement('img');
                 image.src = baseUri + recipe.image;
-                // image.style.gridRow='2' 
-                // Create a link element and set its href to the recipe source URL
+                
+            
                 const link = document.createElement('a');
                 link.href = recipe.sourceUrl;
                 link.textContent = "View Recipe"
-                // link.style.gridRow = '4'
-                // Append the title, image, and link to the recipe container
+            
                 recipeContainer.append(title);
                 recipeContainer.append(image);
                 recipeContainer.append(link);
-                // Append the recipe container to the output element
+                
                 output.append(recipeContainer);
             }
 
