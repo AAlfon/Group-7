@@ -48,9 +48,9 @@ const titleOutput = document.querySelector("#searchTitle")
 const searchInput = () => {
 
     const searchItem = document.querySelector('#recipesearch');
-
+    const loadingIcon = document.querySelector('#loadingIcon');
     const finalUrl = wholeRl + searchItem.value;
-
+    loadingIcon.style.display = "block";
     output.innerHTML = "";
    
 
@@ -85,10 +85,11 @@ const searchInput = () => {
               
                 output.append(recipeContainer);
             }
-
+            loadingIcon.style.display = "none";
         })
         .catch(err => {
             console.log(err);
+            loadingIcon.style.display = "none";
         })
 
 }
