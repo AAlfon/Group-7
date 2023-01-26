@@ -79,7 +79,7 @@ section {
     width: 100%;
     height: 100vh;
     background: url(./pics/bg-home.webp);
-    opacity: 0.8;
+    opacity: 0.9;
     background-size: cover;
     background-position: center;
     display: grid;
@@ -130,6 +130,7 @@ header.sticky{
 
 .sticky .logo{
     color: var(--text-color);
+    text-shadow: -3px 1px 2px rgba(0,0,0,0.6);
 }
 .sticky .navbar a{
     color: var(--text-color);
@@ -138,6 +139,9 @@ header.sticky{
 .text h2{
     font-size: var(--h2-font);
     line-height: 1.1;
+}
+.home-text p{
+    text-shadow: -3px 1px 2px rgba(0,0,0,0.6);
 }
 .row-items{
     display: grid;
