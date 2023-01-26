@@ -91,10 +91,10 @@
 
     <!-- menu section -->
     <section class="menu" id="menu">
-      
+        
 
         <div class="menu-content">
-           
+            
             <div class="box">
                 
 
@@ -167,9 +167,17 @@
         </div>
         <div class="send">
             <form action="https://formspree.io/f/mwkjpdvb" method="POST">
-             <input type="email" placeholder="Write Your Email" required>
-             <input type="submit" value="Submit">
-            </form>
+                <label>Name:</label>
+                <input type="text" name="name" required />
+      
+                <label>Email:</label>
+                <input type="email" name="email" required />
+      
+                <label>Message:</label>
+                <textarea name="message" required></textarea>
+      
+                <button type="submit">Send</button>
+              </form>
 
         </div>
 

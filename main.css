@@ -235,6 +235,7 @@ header.sticky{
     font-weight: 600;
     color: var(--bg-color);
  }
+ 
 .search form {
     max-width: 100%;
     width: 600px;
@@ -294,28 +295,30 @@ header.sticky{
     position: relative;
 }
 
-.newsletter form input:first-child{
-    display: inline-block;
-    width: 100%;
-    padding: 20px 150px 20px 30px;
-    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
-    outline: none;
-    border: none;
-    border-radius: 15px;
+/* form css */
+.send form {
+    display: flex;
+    flex-direction: column;
 }
 
-.newsletter form input:last-child{
-    display: inline-block;
-    position: absolute;
-    outline: none;
-    border: none;
-    padding:  14px 30px;
-    border-radius: 15px;
-    background: grey;
-    color: var(--bg-color);
-    top:6px;
-    right: 6px;
-    cursor: pointer;
+.send label {
+    margin-bottom: 1em;
+    
+}
+
+.send input, .send textarea {
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 0.5em;
+}
+.send button {
+    width: calc(100%/2-0.5em);
+    height: 2em;
+}
+.row-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #contact{
@@ -349,7 +352,7 @@ header.sticky{
     display: grid; 
     grid-template-columns: 25% 25% 25%; 
     grid-template-rows: auto;
-    background-color: white;
+    background-color: transparent;
     margin-top: 100px;
     justify-content: space-around;   
     /* border-bottom: 5px solid red; */
@@ -383,12 +386,13 @@ header.sticky{
 
 .jsout div a {
     grid-row-start: 3;
-   
+   color: #fff;
     margin-bottom: 20px;
     /* border-bottom: 2px solid grey; */
 }
 .jsout div h3 {
     grid-row-start: 1;
+    color: #fff;
     /* margin-bottom: 30px; */
 
 }
